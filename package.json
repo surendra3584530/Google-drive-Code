@@ -23,7 +23,7 @@
     "@types/gapi": "0.0.39",
     "@types/gapi.auth2": "0.0.50",
     "@types/gapi.client.drive": "^3.0.3",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "core-js": "^2.5.4",
     "gapi-client": "0.0.3",
     "ionic-angular": "^3.9.9",
