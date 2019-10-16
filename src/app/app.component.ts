@@ -9,6 +9,9 @@ declare var gapi: any;
 
 export class AppComponent 
  {
+    constructor(){
+    this.updateSigninStatus = this.updateSigninStatus.bind(this)
+   }
     // Client ID and API key from the Developer Console
   CLIENT_ID = '536077714758-t6topsrfcn0v80plcgakd9tnvss8hqbu.apps.googleusercontent.com';
   API_KEY = 'AIzaSyCNSsG7Sl-5-iqiT2QHrleMlpIaJmHkGVk';
