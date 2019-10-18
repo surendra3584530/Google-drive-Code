@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from '../environments/environment';
 declare var gapi: any;
 
 @Component({
@@ -12,17 +13,6 @@ export class AppComponent
     constructor(){
     this.updateSigninStatus = this.updateSigninStatus.bind(this)
    }
-    // Client ID and API key from the Developer Console
-  CLIENT_ID = '536077714758-t6topsrfcn0v80plcgakd9tnvss8hqbu.apps.googleusercontent.com';
-  API_KEY = 'AIzaSyCNSsG7Sl-5-iqiT2QHrleMlpIaJmHkGVk';
-   
-  // Array of API discovery doc URLs for APIs used by the quickstart
-  DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/drive/v3/rest"];
-   
-  // Authorization scopes required by the API; multiple scopes can be
-  // included, separated by spaces.
-  SCOPES = 'https://www.googleapis.com/auth/drive.metadata.readonly';
-
   signInButton = document.getElementById('signin_button');
 
 
@@ -38,10 +28,10 @@ export class AppComponent
    initClient()
     {
       gapi.client.init({
-        apiKey: this.API_KEY,
-        clientId: this.CLIENT_ID,
-        discoveryDocs: this.DISCOVERY_DOCS,
-        scope: this.SCOPES
+        apiKey: environment.API_KEY,
+        clientId: environment.CLIENT_ID,
+        discoveryDocs: environment.DISCOVERY_DOCS,
+        scope: environment.SCOPES
     }).then(data=>{
        // Listen for sign-in state changes.
        gapi.auth2.getAuthInstance().isSignedIn.listen(this.updateSigninStatus);
