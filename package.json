@@ -27,7 +27,7 @@
     "core-js": "^2.5.4",
     "gapi-client": "0.0.3",
     "ionic-angular": "^3.9.9",
-    "papaparse": "^5.1.0",
+    "papaparse": "^5.2.0",
     "rxjs": "6.0.0",
     "rxjs-compat": "^6.1.0",
     "zone.js": "^0.8.26"
